@@ -29,34 +29,6 @@
 - GraphRAG knowledge layer
 - 175B parameter foundation model
 
-## Reproducibility: All experiments are fully reproducible.
-
-### Run main benchmark
-
-```bash
-
-python experiments/run_main_benchmark.py
-
-
-### Run ablation
-python experiments/run_ablation.py
-
-### Run robustness tests
-python experiments/export_final_tables.py
-
-### Run failure analysis
-
-python experiments/run_failure_analysis.py
-
-### Hardware
-
-GPU: A100 / H100 recommended
-CUDA: 11.8+
-RAM: 64 GB recommended
-
-### Kubernetes
-kubectl apply -f deployment/k8s/
-
 ## Statistical Validation
 
 ## We follow rigorous statistical evaluation:
@@ -94,3 +66,28 @@ kubectl apply -f deployment/k8s/
 - Text-to-SQL accuracy: **94.2%**
 - Uptime: **99.7%**
 - User satisfaction: **4.6/5**
+
+### Hardware
+
+- GPU: A100 / H100 recommended
+- CUDA: 11.8+
+- RAM: 64 GB recommended
+
+## Reproducibility: All experiments are fully reproducible.
+### Run main benchmark
+
+```bash
+### Run benchmark
+python experiments/run_main_benchmark.py
+
+### Run ablation
+python experiments/run_ablation.py
+
+### Run robustness tests
+python experiments/export_final_tables.py
+
+### Run failure analysis
+python experiments/run_failure_analysis.py
+
+### Kubernetes
+kubectl apply -f deployment/k8s/
