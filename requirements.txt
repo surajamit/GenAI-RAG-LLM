@@ -1,0 +1,17 @@
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib
+seaborn
+networkx
+tqdm
+pyyaml
+fastapi
+uvicorn
+sentence-transformers
+pymupdf
+redis
+psycopg2-binary
+faiss-cpu
+sqlparse

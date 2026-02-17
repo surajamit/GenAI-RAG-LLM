@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environments
+.venv/
+env/
+
+# Data
+data/raw/
+data/processed/
+*.csv
+*.tsv
+*.jsonl
+
+# Models
+checkpoints/
+*.pt
+*.bin
+*.safetensors
+
+# Logs
+logs/
+wandb/
+
+# System
+.DS_Store
+Thumbs.db
