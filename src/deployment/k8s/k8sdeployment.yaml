@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graphrag-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: graphrag
+  template:
+    metadata:
+      labels:
+        app: graphrag
+    spec:
+      containers:
+      - name: graphrag
+        image: graphrag:latest
+        ports:
+        - containerPort: 8000

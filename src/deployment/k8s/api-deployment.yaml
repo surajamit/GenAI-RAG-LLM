@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: genai-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: genai-api
+  template:
+    metadata:
+      labels:
+        app: genai-api
+    spec:
+      containers:
+      - name: api
+        image: genai/api:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            nvidia.com/gpu: 1

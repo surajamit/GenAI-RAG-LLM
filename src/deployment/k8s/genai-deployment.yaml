@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: genai-inference
+  namespace: genai-platform
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: genai-inference
+  template:
+    metadata:
+      labels:
+        app: genai-inference
+    spec:
+      containers:
+        - name: genai-container
+          image: genai-platform:latest
+          ports:
+            - containerPort: 8000
+
+          resources:
+            requests:
+              cpu: "2"
+              memory: "8Gi"
+              nvidia.com/gpu: 1
+            limits:
+              cpu: "4"
+              memory: "16Gi"
+              nvidia.com/gpu: 1
+
+          env:
+            - name: MODEL_BACKEND
+              value: "tensorrt"
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 10
