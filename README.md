@@ -1,8 +1,6 @@
 ## ## Enterprise GenAI GraphRAG Platform  ## ## 
-
-## Overview
 ## This repository implements a graph-enhanced retrieval and agentic AI platform featuring six custom-trained LLMs,
-##   GraphRAG retrieval, ATS analysis, autonomous research assistance, and Text-to-SQL capabilities.
+## GraphRAG retrieval, ATS analysis, autonomous research assistance, and Text-to-SQL capabilities.
 ## A system-engineered generative AI platform integrating GraphRAG, hybrid retrieval, and multi-agent reasoning for enterprise intelligence.
 
 ## Key Features supports
@@ -69,9 +67,7 @@ kubectl apply -f deployment/k8s/
 - Multiple independent runs (n ≥ 10)
 - Significance threshold: p < 0.05
 
-
 ## All reported improvements are averaged across multiple runs with deterministic initialization.
-
 ## Experimental Rigor
 
 - Fixed random seeds
@@ -81,9 +77,7 @@ kubectl apply -f deployment/k8s/
 - Graph explainability support
 - Human-aligned ATS evaluation (n=500)
 
-## Mathematical Coverage
-
-The codebase includes implementations for:
+## Mathematical Coverage and The codebase includes implementations for:
 
 - Cosine similarity
 - Temperature-scaled softmax
@@ -91,7 +85,6 @@ The codebase includes implementations for:
 - Precision@k and Recall@k
 - ATS scoring metrics
 - SQL execution accuracy
-
 
 ## Key Results
 - Exact Match improvement: **+23%**
@@ -101,6 +94,3 @@ The codebase includes implementations for:
 - Text-to-SQL accuracy: **94.2%**
 - Uptime: **99.7%**
 - User satisfaction: **4.6/5**
-
-
-
