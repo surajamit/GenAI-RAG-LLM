@@ -1,0 +1,18 @@
+evaluation:
+  runs: 10
+  seed: 42
+
+metrics:
+  retrieval:
+    - precision_at_10
+    - recall_at_10
+    - mrr
+    - hit_rate
+
+  ats:
+    - mae
+    - correlation
+
+  text2sql:
+    - execution_accuracy
+    - syntax_error_rate

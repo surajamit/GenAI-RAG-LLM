@@ -1,0 +1,13 @@
+embedding:
+  dim: 768
+
+retrieval:
+  top_k: 5
+  alpha: 0.7
+
+chunking:
+  chunk_size: 500
+  overlap: 50
+
+evaluation:
+  k_values: [1, 5, 10]

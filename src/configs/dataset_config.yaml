@@ -1,0 +1,16 @@
+datasets:
+  msmarco:
+    task: retrieval
+    metric: MRR
+
+  conll2003:
+    task: ner
+    metric: F1
+
+  spider:
+    task: text2sql
+    metric: execution_accuracy
+
+  fever:
+    task: fact_verification
+    metric: label_accuracy
